@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- REACT LIBRARY -->
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">React has not rendered yet</div>
+
+    <!-- challenge - create one component and use props to recreate the previous
+    results -->
+
+    <script type="text/babel">
+      class ColorSpectrum extends React.Component {
+        render() {
+          var colorStyle = {
+            height: 50,
+            width: 150,
+            backgroundColor: this.props.color,
+          };
+          return (
+            <div style={colorStyle}>
+              <b>{this.props.name}</b>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+        // REACT what, REact WHERE
+        <div>
+          <ColorSpectrum color="red" name="Red" />
+          <ColorSpectrum color="orange" name="Orange" />
+          <ColorSpectrum color="yellow" name="Yellow" />
+          <ColorSpectrum color="green" name="Green" />
+          <ColorSpectrum color="blue" name="Blue" />
+          <ColorSpectrum color="indigo" name="Indigo" />
+          <ColorSpectrum color="violet" name="Violet" />
+        </div>,
+        document.getElementById('app')
+      );
+    </script>
+  </body>
+</html>

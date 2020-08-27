@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- REACT LIBRARY -->
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>FriendLy</title>
+  </head>
+  <body>
+    <div id="app">React has not rendered yet</div>
+
+    <script type="text/babel">
+      // FriendLy Complex Component
+      function FriendLy(props) {
+        var friendlyStyle = {
+          display: 'inline-block',
+          margin: 20,
+          height: 300,
+          width: 200,
+          padding: 0,
+          backgroundColor: '#FFF',
+          WebkitFilter: 'drop-shadow(0px 0px 5px #555)',
+          filter: 'drop-shadow(0px 0px 5px #555)',
+        };
+        return (
+          <div style={friendlyStyle}>
+            <Avatar twitterPic={props.twitterPic} />
+            <UserName name={props.name} />
+            <GetConnected />
+          </div>
+        );
+      }
+
+      // Avatar Component
+      function Avatar(props) {
+        var avatarStyle = {
+          marginLeft: 27,
+          marginTop: 20,
+          width: 150,
+          height: 150,
+          borderRadius: '50%',
+        };
+        return (
+          <img src={props.twitterPic} alt="profile pic" style={avatarStyle} />
+        );
+      }
+
+      // UserName Component
+      function UserName(props) {
+        var nameStyle = {
+          fontSize: 24,
+          textAlign: 'center',
+          fontFamily: 'Arial, Helvetica, sans-serif',
+          margin: 20,
+        };
+        return <h1 style={nameStyle}>{props.name}</h1>;
+      }
+
+      // GetConnected Complex Component
+      function GetConnected() {
+        var getConnectedStyle = {
+          marginLeft: 15,
+        };
+        return (
+          <div style={getConnectedStyle}>
+            <Like />
+            <Share />
+            <Add />
+          </div>
+        );
+      }
+
+      var iconStyle = {
+        margin: 20,
+      };
+
+      // Like Component
+      function Like() {
+        return (
+          <i
+            className="fa fa-thumbs-o-up"
+            aria-hidden="true"
+            style={iconStyle}
+          ></i>
+        );
+      }
+
+      // Share Component
+      function Share() {
+        return (
+          <i className="fa fa-share" aria-hidden="true" style={iconStyle}></i>
+        );
+      }
+
+      // Add Component
+      function Add() {
+        return (
+          <i className="fa fa-users" aria-hidden="true" style={iconStyle}></i>
+        );
+      }
+
+      ReactDOM.render(
+        <div>
+          <FriendLy
+            name="Omar"
+            twitterPic="https://pbs.twimg.com/profile_images/454860112851509249/uflv0pHz_400x400.jpeg"
+          />
+          <FriendLy
+            name="Akash"
+            twitterPic="https://pbs.twimg.com/profile_images/768784043320217604/cyXzetpk_400x400.jpg"
+          />
+          <FriendLy
+            name="Elon"
+            twitterPic="https://pbs.twimg.com/profile_images/378800000305778238/852d2f76797dbe1da82095f988d38fbe_400x400.png"
+          />
+          <FriendLy
+            name="Kanye"
+            twitterPic="https://pbs.twimg.com/profile_images/1276461929934942210/cqNhNk6v_400x400.jpg"
+          />
+          <FriendLy
+            name="Aidan"
+            twitterPic="https://pbs.twimg.com/profile_images/1079010535218298881/-P4RwU6y_400x400.jpg"
+          />
+          <FriendLy
+            name="Elliott"
+            twitterPic="https://pbs.twimg.com/profile_images/496832588280266752/dcq7qf-z_400x400.jpeg"
+          />
+          <FriendLy
+            name="Sam"
+            twitterPic="https://pbs.twimg.com/profile_images/1203880316718534657/tI5XBhw__400x400.jpg"
+          />
+          <FriendLy
+            name="Kevin Hart"
+            twitterPic="https://pbs.twimg.com/profile_images/839198522385793025/jPENEMJT_400x400.jpg"
+          />
+          <FriendLy
+            name="Asap Rocky"
+            twitterPic="https://pbs.twimg.com/profile_images/1090360662272950272/X-W3yeK7_400x400.jpg"
+          />
+          <FriendLy
+            name="Dame"
+            twitterPic="https://pbs.twimg.com/profile_images/1013881960249229312/DDUVi71h_400x400.jpg"
+          />
+        </div>,
+        document.getElementById('app')
+      );
+    </script>
+  </body>
+</html>
