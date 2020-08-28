@@ -65,6 +65,24 @@ Link tag should be in header of the HTML to link the CSS file
 
 - class won't work as a name in JSX but className does, but due to some bugs, className should be used
 
+## React Events
+
+Handling events with React elements is very similar to handling events on DOM elements. There are some syntactic differences:
+
+- React events are named using camelCase rather than lowercase
+- With JSX you pass a function as the event handler, rather than a string
+  Event Handler: a function that should run whenever an event occurs
+
+Naming Convention:
+
+1. Begin with "on" or "handle"
+2. Name the DOM element
+3. Describe the expected action
+
+# This & Bind
+
+In most cases, the value of <b>"this"</b> is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called. ES5 introduced the <b>bind</b> method to set the value of a function's "this" regardless of how it's called. Bind Creates a new function that will have "this" set to the first parameter passed to bind().
+
 ## Tips
 
 Stateless Function Components
