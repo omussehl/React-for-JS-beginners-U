@@ -1,9 +1,6 @@
 # Readme // notes from the course
 
-** Version 1.00 **
-emmet boiler plater: "html5:", this will make a prompt
-
-##Babel
+I used Bable for the first time to use JSX. Below is a definition along with other things I wanted to note or remember.
 Babel is a free and open-source JavaScript trans-compiler that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript that can be run by older JavaScript engines. Babel is a popular tool for using the newest features of the JavaScript programming language.
 
 - babel is how we take advantage of ecma script 5 and take advantage of JSX
